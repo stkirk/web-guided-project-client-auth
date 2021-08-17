@@ -21,7 +21,9 @@ class GasPrices extends React.Component {
         authorization: token
       }
     }).then(res=> {
-        console.log(res);
+        this.setState({
+          gasPrices: res.data.data
+        })
       })
       .catch(err=> {
         console.log(err);

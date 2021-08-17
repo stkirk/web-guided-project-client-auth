@@ -19,7 +19,6 @@ function App() {
           <li>
             {localStorage.getItem("token") && <div>
               <Link to="/protected">Protected Page</Link>
-              <h5>Welcome {localStorage.getItem("username")}</h5>
             </div>
             }
           </li>

@@ -20,7 +20,13 @@ function App() {
             {localStorage.getItem("token") && <div>
               <Link to="/protected">Protected Page</Link>
               <h5>Welcome {localStorage.getItem("username")}</h5>
-            </div>}
+            </div>
+            }
+          </li>
+          <li>
+            {
+              (localStorage.getItem("role") === "editor") &&  <Link>Admin Page</Link>
+            }
           </li>
         </ul>
 

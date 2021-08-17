@@ -17,7 +17,7 @@ function App() {
             <Link to="/logout">Logout</Link>
           </li>
           <li>
-            {localStorage.getItem("token")?<Link to="/protected">Protected Page</Link>:<div></div>}
+            {localStorage.getItem("token") && <Link to="/protected">Protected Page</Link>}
           </li>
         </ul>
 

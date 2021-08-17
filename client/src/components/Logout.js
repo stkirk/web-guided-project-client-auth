@@ -8,6 +8,8 @@ const Logout = (props)=> {
             .post('/logout')
             .then(res=> {
                 localStorage.removeItem("token");
+                localStorage.removeItem("role", res.data.role);
+                localStorage.removeItem("username", res.data.username);
                 props.history.push('/login');
             });
         

@@ -17,7 +17,10 @@ function App() {
             <Link to="/logout">Logout</Link>
           </li>
           <li>
-            {localStorage.getItem("token") && <Link to="/protected">Protected Page</Link>}
+            {localStorage.getItem("token") && <div>
+              <Link to="/protected">Protected Page</Link>
+              <h5>Welcome {localStorage.getItem("username")}</h5>
+            </div>}
           </li>
         </ul>
 

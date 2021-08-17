@@ -2,17 +2,17 @@ import React, { useEffect} from "react";
 import axios from 'axios';
 
 const Logout = ()=> { 
-    console.log("here");
+    // console.log("here");
 
-    useEffect(()=> {
-        console.log("here");
-        axios.post('http://localhost:5000/api/logout')
-        .then(res=> {
-            localStorage.removeItem("token");
-        });
-    }, []);
+    // useEffect(()=> {
+    //     console.log("here");
+    //     axios.post('http://localhost:5000/api/logout')
+    //     .then(res=> {
+    //         localStorage.removeItem("token");
+    //     });
+    // }, []);
     
-    return(<div></div>);
+    return(<div>Logout</div>);
 }
 
 export default Logout;

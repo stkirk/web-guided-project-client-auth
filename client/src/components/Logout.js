@@ -2,7 +2,7 @@ import React, { useEffect} from "react";
 import axios from 'axios';
 
 const Logout = ()=> { 
-    // console.log("here");
+    console.log("here");
 
     // useEffect(()=> {
     //     console.log("here");
@@ -12,7 +12,7 @@ const Logout = ()=> {
     //     });
     // }, []);
     
-    return(<div>Logout</div>);
+    return(<div></div>);
 }
 
 export default Logout;

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 
-const PrivateRoute = ({component, ...rest})=> {
-    
+const PrivateRoute = ({component:Component, ...rest})=> {
+
     return <Route {...rest} render={()=> {
-        return <div>Private Route</div>
+        return <Component/>
     }}/>
 }
 

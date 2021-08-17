@@ -24,14 +24,16 @@ class Login extends React.Component {
     //2. If request is valid, get the token.
     //3. Save the token from the request in localStorage.
     //4. if error, console.log error
-    axios.post('http://localhost:5000/api/login', this.state.credentials)
-      .then(res => {
-        localStorage.setItem("token", res.data.token);
-        this.props.history.push('/protected');
-      })
-      .catch(err=> {
-        console.log(err);
-      });
+    console.log(this.state.credentials);
+
+    // axios.post('http://localhost:5000/api/login', this.state.credentials)
+    //   .then(res => {
+    //     localStorage.setItem("token", res.data.token);
+    //     this.props.history.push('/protected');
+    //   })
+    //   .catch(err=> {
+    //     console.log(err);
+    //   });
   };
 
   render() {

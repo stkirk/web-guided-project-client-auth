@@ -2,8 +2,6 @@ import React, { useEffect } from "react";
 import axiosWithAuth from './../utils/axiosWithAuth';
 
 const Logout = (props)=> { 
-    console.log(props);
-    
     useEffect(()=> {
         axiosWithAuth()
             .post('/logout')

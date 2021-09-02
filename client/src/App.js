@@ -1,9 +1,9 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
-
-import Login from './components/Login';
-import Logout from './components/Logout';
-import GasPrices from './components/GasPrices';
+import React from "react";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+//change branch
+import Login from "./components/Login";
+import Logout from "./components/Logout";
+import GasPrices from "./components/GasPrices";
 
 function App() {
   return (
@@ -25,7 +25,6 @@ function App() {
           <Route path="/login" component={Login} />
           <Route path="/" component={Login} />
           <Route path="/logout" component={Logout} />
-          
         </Switch>
       </div>
     </Router>

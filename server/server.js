@@ -9,9 +9,10 @@ const token = "ahuBHejkJJiMDhmODZhZi0zNWRhLTQ4ZjItOGZhYi1jZWYzOTA07i73Gebhu98";
 
 app.use(bodyParser.json());
 app.use(cors());
-app.use(morgan('dev'));
+app.use(morgan("dev"));
 
 function authenticator(req, res, next) {
+  // STEP 5: authenticator is looking for a headers property in the req object that comes from our request, the headers property is an object with a key called authorization that contains our token value
   const { authorization } = req.headers;
   if (authorization === token) {
     next();
@@ -27,7 +28,7 @@ app.post("/api/login", (req, res) => {
     res.status(200).json({
       username: "lambdaSchool",
       role: "editor",
-      token: token
+      token: token,
     });
   } else {
     res
@@ -39,7 +40,7 @@ app.post("/api/login", (req, res) => {
 app.post("/api/logout", (req, res) => {
   //remove token from database
   res.status(200).json({
-    payload: token
+    payload: token,
   });
 });
 
